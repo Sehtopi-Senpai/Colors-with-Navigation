@@ -18,6 +18,8 @@ class ColorDetailViewController: UIViewController {
         super.viewDidLoad()
         
         colorNameLabel.text = color?.name
+        
+        self.view.backgroundColor = color?.uiColor
 
         // Do any additional setup after loading the view.
     }
