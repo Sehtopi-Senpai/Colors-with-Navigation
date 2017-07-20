@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Colors View Controller-->
+        <!--Colors-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ColorsViewController" customModule="Colors_with_navigation" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,6 +41,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="NBR-qX-O8w" kind="show" id="HNn-V2-q5e"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -57,11 +60,47 @@
                             <constraint firstItem="jYB-tq-rrt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cPv-v9-6BW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2I5-je-B1B"/>
+                    <navigationItem key="navigationItem" title="Colors" id="2I5-je-B1B"/>
+                    <connections>
+                        <outlet property="colorsTableView" destination="jYB-tq-rrt" id="8Zg-Sp-X97"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="-29.23538230884558"/>
+        </scene>
+        <!--Color Detail View Controller-->
+        <scene sceneID="spK-lK-oDj">
+            <objects>
+                <viewController id="NBR-qX-O8w" customClass="ColorDetailViewController" customModule="Colors_with_navigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iub-oQ-SFk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wd7-aQ-9wa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Psm-oU-kIH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcm-nm-XpP">
+                                <rect key="frame" x="166" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dcm-nm-XpP" firstAttribute="centerX" secondItem="Psm-oU-kIH" secondAttribute="centerX" id="fWi-BG-Ri3"/>
+                            <constraint firstItem="Dcm-nm-XpP" firstAttribute="centerY" secondItem="Psm-oU-kIH" secondAttribute="centerY" id="qd0-st-KE3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorNameLabel" destination="Dcm-nm-XpP" id="obs-qQ-ErK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8bF-R2-Eqn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="-29"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nXU-55-Xg2">
@@ -80,6 +119,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zl4-Q5-UXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="108" y="-29.23538230884558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W5U-wS-Hvm">
+            <objects>
+                <viewController id="PfW-Iv-H20" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="diT-mP-cpI"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dld-Bx-3zZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kok-Dj-ecg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEm-Au-p1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
